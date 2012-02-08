@@ -1,0 +1,164 @@
+/*----------------------------------------------------------
+=Reset
+----------------------------------------------------------*/
+body {
+	margin: 0;
+}
+
+button {
+	padding: 0;
+}
+
+
+/*----------------------------------------------------------
+=Containers
+----------------------------------------------------------*/
+
+video {
+	width: 100%;
+	height: 300px;
+	background: #000;
+}
+
+div#dt-video-container {
+	width: 450px;
+	height: 330px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -170px -200px 0;
+	line-height: 0;
+	-webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, .35);
+	box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, .35);
+}
+
+div#dt-player-controls {
+	width: 448px;
+	height: 28px;
+	border: 1px solid #222;
+	position: relative;
+	line-height: 40px;
+}
+
+
+/*----------------------------------------------------------
+=Controls
+----------------------------------------------------------*/
+
+.dt-player-control {
+	height: 28px;
+	line-height: 26px;
+	display: block;
+	color: #fff;
+	font-size: 12px;
+	border-top: 1px solid rgba(200, 200, 200, .25);
+	border-right: 1px solid rgba(0, 0, 0, .3);
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+	border-left: 1px solid rgba(100, 100, 100, .35);
+	background: rgb(37,37,37);
+	background: linear-gradient(top, rgba(47, 47, 47, 1) 0%, rgba(12, 12, 12, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(47, 47, 47, 1) 0%, rgba(12, 12, 12, 1) 100%);
+}
+
+button.dt-player-control {
+	cursor: pointer;
+}
+
+button.dt-player-control:hover {
+	background: linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(25, 25, 25, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(55, 55, 55, 1) 0%, rgba(25, 25, 25, 1) 100%);
+}
+
+button.dt-player-control:active {
+	background: rgb(37,37,37);
+	background: linear-gradient(top, rgba(35, 35, 35, 1) 0%, rgba(45, 45, 45, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(35, 35, 35, 1) 0%, rgba(45, 45, 45, 1) 100%);
+}
+
+/* ---------- toggle/loop button ---------- */
+button#toggle-loop {
+	width: 40px;
+	float: right;
+}
+
+button#toggle-loop.looping img {
+	margin-top: -27px;
+}
+
+/* ---------- play/pause button ---------- */
+button#play-pause {
+	width: 60px;
+	float: left;
+}
+
+button#play-pause.playing img {
+	margin-top: -27px;
+}
+
+/* ---------- progress bar ---------- */
+div#progress-bar-wrapper {
+	overflow: hidden;
+}
+
+div#progress-bar {
+	clear: both;
+    box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	background: linear-gradient(top, rgba(37, 37, 37, 1) 0%, rgba(5, 5, 5, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(37, 37, 37, 1) 0%, rgba(5, 5, 5, 1) 100%);
+}
+
+div#progress-bar:hover {
+	background: linear-gradient(top, rgba(47, 47, 47, 1) 0%, rgba(12, 12, 12, 1) 100%);
+	background: -webkit-linear-gradient(top, rgba(47, 47, 47, 1) 0%, rgba(12, 12, 12, 1) 100%);
+}
+
+div#progress-bar div {
+	width: 0px;
+	height: 100%;
+	margin: -1px -1px -1px -3px;
+	opacity: .9;
+	position: absolute;
+	border-top: 1px solid rgba(200, 200, 200, .35);
+	border-bottom: 1px solid rgba(0, 0, 0, .35);
+	border-left: 2px solid rgba(100, 100, 100, .45);
+	background: -webkit-linear-gradient(top, rgba(255,109,0,1) 0%,rgba(229,47,0,1) 100%);
+	background: linear-gradient(top, rgba(255,109,0,1) 0%,rgba(229,47,0,1) 100%);
+}
+
+div#progress-bar:hover div {
+	opacity: 1;
+}
+
+/* ---------- loop markers ---------- */
+div.marker {
+    /*display: none;*/
+	position: absolute;
+	top: 200px;
+	left: 500px;
+	width: 8px;
+	height: 13px;
+	background: #fff;
+	opacity: .4;
+	z-index: 999;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-topright: 2px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .5);
+	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, .5);
+}
+
+div.marker:after {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	top: 100%;
+	border-left: 4px solid transparent;
+	border-bottom: 0;
+	border-top: 5px solid #fff;
+	border-right: 4px solid transparent;
+}

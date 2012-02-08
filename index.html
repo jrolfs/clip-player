@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset=utf-8>
+	<title>Clips POC</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body id="main">
+
+    <div id="dt-video-container">
+        <video id="dt-html-player">
+            <source src="test.m4v" type="video/mp4" />
+        </video>
+        <div id="dt-player-controls">
+            <button id="play-pause" class="dt-player-control">
+                 <img src="play_pause.png" />
+            </button>
+            <button id="toggle-loop" class="dt-player-control">
+                <img src="toggle_loop.png" />
+            </button>
+            <div id="progress-bar-wrapper">
+                <div id="progress-bar" class="dt-player-control">
+                    <div><!--spacer--></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div id="dt-loop-in" class="marker"></div>
+	<div id="dt-loop-out" class="marker"></div>
+
+</body>
+
+</html>
